@@ -47,7 +47,7 @@
   .card-body{
     padding: 0;
   }
-
+  
   .card h2{
     margin: 5px;
     font-size: 1.2rem;
@@ -89,7 +89,6 @@
   .faded{
     opacity: 0.5;
   }
-
 
   </style>
 
@@ -135,12 +134,12 @@
                 <p><strong>ID: </strong>{{id}}</p>
                 <p><strong>Condition: </strong>{{condition}}</p>
                 <p>{{{description}}}</p>
-{{#if pending-pickup}}
-<p class="faded">{{price}} </p>
-<h2><strong class="pending-pickup">-PENDING PICKUP-</strong></h2>
-{{else}}
-<h2><strong>{{price}} </strong></h2>
-{{/if}}
+                {{#if pending-pickup}}
+                <p class="faded">{{price}} </p>
+                <h2><strong class="pending-pickup">-PENDING PICKUP-</strong></h2>
+                {{else}}
+                <h2><strong>{{price}} </strong></h2>
+                {{/if}}
 
               </div>
               <div class="card-body">
