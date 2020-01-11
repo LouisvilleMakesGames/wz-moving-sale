@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{meta.description}}">
+  <meta name="author" content="{{author}}">
+  <title>{{meta.title}}</title>
+  <meta property="og:site_name" content="{{meta.siteName}}">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:url" content="{{meta.url}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{meta.preview-img}}">
+
+  <meta name="twitter:site" content="{{meta.siteName}}">
+  <meta name="twitter:title" content="{{meta.title}}">
+  <meta name="twitter:creator" content="{{meta.creator}}">
+  <meta name="twitter:description" content="{{meta.description}}">
+  <meta name="twitter:image" content="{{meta.preview-img}}">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .card-img{
+    width: 100%;
+  }
+  .card-body{
+    padding: 0;
+  }
+
+  .card h2{
+    margin: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card-text.scroll{
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: auto;
+  }
+  li{
+    margin-bottom: 20px;
+  }
+  .btn-lg{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  p a{
+    text-decoration: underline;
+    color: #60c3ca !important;
+  }
+
+  .btn-primary, .btn-primary:active, .btn-primary:visited {
+    color: white !important;
+    background-color: #60c3ca !important;
+    text-decoration: none!important;
+  }
+  .btn-primary:hover{
+    color: white !important;
+    background-color: #217379 !important;
+    text-decoration: none!important;
+  }
+
+  .pending-pickup{
+    color: white !important;
+    background-color: #60c3ca !important;
+  }
+
+  .faded{
+    opacity: 0.5;
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="img/preview.png">
+
+            <h2>{{jumbo-heading}}</h2>
+            <strong>{{intro-strong}}</strong>
+            <p>{{intro-text}}</p>
+
+            <a href="{{order-form-url}}" target="_blank" class="btn-lg btn-primary text-decoration-none">{{order-form-btn-text}}</a><br/>
+            <p>{{{description}}}</p>
+            <p class="text-muted">{{payment-info}}</p>
+            <p> {{faq-link-text}}<a href="#frequently-asked-questions">{{faq-link}}</a></p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+
+          {{#each items}}
+          {{#if price}}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm {{#if pending-pickup}}faded{{/if}}">
+              <a href="img/{{photo-id}}.png"  target="_blank" ><img class="card-img" src="img/{{photo-id}}.png" alt="{{brand}} {{name}} - {{../title}}"></a>
+              <div class="container">
+                <h2>{{brand}} {{name}}</h2>
+                <p><strong>ID: </strong>{{id}}</p>
+                <p><strong>Condition: </strong>{{condition}}</p>
+                <p>{{{description}}}</p>
+{{#if pending-pickup}}
+<p class="faded">{{price}} </p>
+<h2><strong class="pending-pickup">-PENDING PICKUP-</strong></h2>
+{{else}}
+<h2><strong>{{price}} </strong></h2>
+{{/if}}
+
+              </div>
+              <div class="card-body">
+
+              </div>
+            </div>
+          </div>
+          {{/if}}
+          {{/each}}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <dvi class="row">
+        <div class="col-sm-12">
+          <h1 class="display-4">More ways to help Louisville Makes Games!</h1>
+          <p class="lead">{{{subscription-info}}} <br><br>
+
+            <a href="{{patreon}}" class="btn-lg btn-primary" target="_blank">{{patreon-link-text}}</a></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <br>
+      <br>
+      <br>
+
+      <footer class="text-muted">
+        <div class="container">
+          <p class="float-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>&copy; 2020 {{meta.title}}</p>
+          <p>
+
+          </div>
+        </footer>
+
+      </main>
+
+      </html>

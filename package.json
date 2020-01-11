@@ -1,0 +1,17 @@
+{
+  "name": "cara-soap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "start": "npm run convert-items && npm run build",
+    "convert-items": "csvtojson 'LMG Inventory - Inventory.csv' > items.json",
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "handlebars": "^4.5.1"
+  }
+}

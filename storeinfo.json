@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "siteName": "Warp Zone Louisville - Moving Sale",
+      "title": "Warp Zone Louisville - Moving Sale",
+      "creator":"Louisville Makes Games",
+      "description":"Warp Zone is moving (very close by to another space on the same block!) and we need to downsize! Grab some great deals!",
+        "preview-img":"img/preview.png",
+        "url":"http://www.warpzonelouisville.com/moving-sale"
+
+  },
+
+
+
+
+  "patreon": "https://www.patreon.com/LouisvilleMakesGames",
+  "twitter": "https://twitter.com/loumakesgames",
+  "Website": "https://www.LouisvilleMakesGames.org",
+
+
+  "jumbo-heading": "HOW TO BUY",
+  "intro-strong":"Warp Zone is moving (very close by to another space on the same block!) and we need to downsize!",
+  "intro-text":"All items are available first come first serve, we prefer cash but paypal works too.",
+  "description": "To buy please use this order form, please do not consider the item yours until you have recieved confirmation via email. All items must be picked up on or before Jan 19th 2020 (unless we setup some special agreement via email).",
+
+  "order-form-btn-text":"Place your order here",
+  "order-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSf4xf8Lye1WMLGv1l_hDP_0vIthd_drvL1gCeD6UqYpGXkifA/viewform",
+  "payment-info": "You will be able to pay via cash or PayPal.",
+
+
+  "subscription-info": "Want to help Louisville Makes Games' mission to keep an encouraging, inclusive game development community alive and well in Louisville? Concider a recurring donation via our Patreon!",
+  "patreon-link-text": "Find out more!"
+
+}
