@@ -1,15 +1,15 @@
 {
-  "name": "cara-soap",
-  "version": "1.0.0",
-  "description": "",
+  "name": "wz-moving-sale",
+  "version": "0.0.1",
+  "description": "A simple html page store that uses data from a google sheet CSV",
   "main": "build.js",
   "scripts": {
     "start": "npm run convert-items && npm run build",
     "convert-items": "csvtojson 'LMG Inventory - Inventory.csv' > items.json",
     "build": "node build.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alex Bezuska (alex@twoscoopgames.com)",
+  "license": "MIT",
   "dependencies": {
     "csvtojson": "^2.0.10",
     "handlebars": "^4.5.1"
